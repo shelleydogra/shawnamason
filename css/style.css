@@ -1,0 +1,14 @@
+
+.main {
+	text-align: center;
+}
+
+.logo {
+	background-color: #4aad8b;
+	color: #4a57c4;
+	font-family: 'sans-serif'
+}
+
+.debug {
+	border: 1px dashed black;
+}
