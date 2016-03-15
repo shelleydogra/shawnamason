@@ -1,6 +1,16 @@
 
+/* BRAND COLORS:  */
+/*
+ BrandDark    - #353129
+ BrandLight   - #ECEBF0
+ BrandTone1   - #687D77
+ BrandTone2   - #C1CE96
+ BrandMedDark - #484A47
+*/
+
+
 .main {
-	text-align: center;
+	text-align: center; 
 }
 
 .logo {
@@ -12,3 +22,95 @@
 .debug {
 	border: 1px dashed black;
 }
+
+body {
+	padding: 85px 0px;
+	background-color: rgba(194, 207, 151, 0.06);
+}
+
+
+
+/* NavBar
+______________________________________________________ */
+
+/* Default Look
+______________________________________________________ */
+
+.navbar-default {
+	
+/* 	TO CONTROL THE BACKGROUND COLOR */
+	background-color: #353129;
+	background-image: none;
+	background-repeat: no-repeat;
+/* ___________________________________________________ */	
+	
+	border-bottom: 5px solid;
+	border-color: #C1CE96;
+	text-transform: uppercase;
+}
+
+/* Navbar Heading */
+.navbar-default .navbar-brand {
+	color: #C1CE96;
+	font-size: 16px;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #353129;
+	background-color: #C1CE96;
+}
+
+/* Navbar link & text */
+.navbar-default .navbar-nav > li > a {
+	color: #C1CE96;
+	font-size: 12px;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	background-color: #C1CE96;
+}
+
+.navbar-default .navbar-nav > .active > a {
+	color: #484A47;
+	background-color: #C1CE96;
+	background-image: none;
+	background-repeat: no-repeat;
+	
+}
+
+.navbar-default .navbar-nav > .active > a:hover {
+	color: #C1CE96;
+	background-color: #484A47;
+}
+
+.bottom-navbar {
+	color: #C1CE96;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* Jumbotron
+______________________________________________________ */
+
+.jumbotron {
+	color: #484A47;
+	background-color: #C1CE96;
+	padding: 10px;
+}
+
+.jumbotron-inverse {
+	color: #C1CE96;
+	background-color:#484A47;
+	padding: 4px;
+}
+
+/* Panel
+______________________________________________________ */
+
+
+
+
+
+
+
+
