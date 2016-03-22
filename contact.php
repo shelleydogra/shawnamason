@@ -57,8 +57,8 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="home.html">Home</a></li>
-							<li class="active"><a href="hours.html">Hours</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="hours.html">Hours</a></li>
+							<li class="active"><a href="contact.php">Contact</a></li>
 							<li><a href="directions.html">Directions</a></li>
 						</ul>
 					</div>	
@@ -68,49 +68,112 @@
 		
 
 	
-	<div class="container text-center text-capitalize">
+	<div class="container text-center">
 		<div class="row"> <!-- HEADING ROW -->
 				<div class="col-md-12">
 					<div class="jumbotron">
 
 						<h1>The Law Office of Shawna Mason</h1>
-						<h2>office hours</h2>
 					</div>
 				</div>
 		</div>
 	</div>
 	
 	
-
-
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-12">
-				<table class=" table text-center">
+			<div class="col-lg-10">
+				<form class="form-horizontal" role="form" method="post" action="contact-send.php">
 					
-					<thead>
-						<tr>
-							<th class="text-center"><h3>Day</h3></th>
-							<th class="text-center"><h3>Hours</h3></th>
-						</tr>
-					</thead>
 					
-					<tbody class="text-capitalize">
-						<tr>
-							<td><h4>monday - friday</h4></td>
-							<td><h4>10:00 A.M - 5:00 P.M</h4></td>
-						</tr>
-
-					</tbody>
-				</table>
-				
+					<div class="form-group">
+						<label for="name" class="col-sm-2 control-label">Name</label>
+						<div class="col-sm-10">
+							<input type="name" autocorrect="off" class="form-control" id="name" name="name" placeholder="Full Name" value="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="phone" class="col-sm-2 control-label">Phone</label>
+						<div class="col-sm-10">
+							<input type="tel" class="form-control" id="phone" name="phone" placeholder="Phone Number" value="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="email" class="col-sm-2 control-label">Email</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" value="">
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="comment" class="col-sm-2 control-label">Message</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" autocapitalize="sentences" rows="5" name="comment" id="comment"></textarea>
+						</div>
+					</div>
+					
+					 <div class="form-group">
+					 	<div class="col-sm-10 col-sm-offset-2">
+					 	<input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+	        			</div>
+	    			</div>
+	    			
+				    <div class="form-group">
+				        <div class="col-sm-10 col-sm-offset-2">
+				            <! Will be used to display an alert to the user>
+				        </div>
+				    </div>
+					
+					
+				</form>
 			</div>
 		</div>
 	</div>
-		
+	
+	<!--
+	
+	<form class="form-horizontal" role="form" method="post" action="index.php">
+	    <div class="form-group">
+	        <label for="name" class="col-sm-2 control-label">Name</label>
+	        <div class="col-sm-10">
+	            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <label for="email" class="col-sm-2 control-label">Email</label>
+	        <div class="col-sm-10">
+	            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <label for="message" class="col-sm-2 control-label">Message</label>
+	        <div class="col-sm-10">
+	            <textarea class="form-control" rows="4" name="message"></textarea>
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
+	        <div class="col-sm-10">
+	            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <div class="col-sm-10 col-sm-offset-2">
+	            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
+	        </div>
+	    </div>
+	    <div class="form-group">
+	        <div class="col-sm-10 col-sm-offset-2">
+	            <! Will be used to display an alert to the user>
+	        </div>
+	    </div>
+	</form>	
+-->
 	
 	
-
+	
 	<nav class="navbar-default navbar-fixed-bottom bottom-navbar">
 		<div class="container">
 			<div class="navbar-header text-nowrap text-danger">

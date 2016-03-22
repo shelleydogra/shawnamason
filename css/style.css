@@ -25,7 +25,7 @@
 
 body {
 	padding: 85px 0px;
-	background-color: rgba(194, 207, 151, 0.06);
+/* 	background-color: rgba(194, 207, 151, 0.06); */
 }
 
 
@@ -104,13 +104,108 @@ ______________________________________________________ */
 	padding: 4px;
 }
 
-/* Panel
+.jumbotron-inverse-text {
+	color: #484A47;
+	background-color:#484A47;
+	padding: 4px;
+	font-size: 20px;
+	
+}
+
+
+/* form
 ______________________________________________________ */
 
+/*
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:visited,
+.btn-primary:focus {
+    background-color: #484A47;
+    border-color: rgba(194, 207, 151, 0.99);
+    color: #C1CE96;
+}
+*/
+
+.btn-primary {
+	background-color: #353129;
+	width: 100%;
+	height: 75px;
+	font-size: 20px;
+}
+
+.btn-primary:hover {
+	background-color: #484A47;
+	border-color: #C1CE96;
+	color: #C1CE96;
+}
+
+/*
+.btn-primary:focus {
+	background-color: #C1CE96;
+	background-image: none;
+	background-repeat: no-repeat;
+}
+*/
+
+.form-control:focus {
+        border-color: rgba(194, 207, 151, 1);
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 10px rgba(194, 207, 151, 0.99);
+}
+
+.form-control:hover {
+        background-color: rgba(194, 207, 151, .25);
+}
+
+/* map embed
+______________________________________________________ */
+
+.embed {
+	
+}
+
+/* Separators
+______________________________________________________ */
+
+.empty_box_wide {
+	padding: 10px 0px; }
+
+.empty_box_narrow {
+	padding: 3px 0px; }
+	
+.empty_box_tiny {
+	padding: 1px 0px; }
+	
+.empty_box_medium {
+	padding: 6px 0px; }
+	
+/* Colors
+______________________________________________________ */	
+.green { background-color: #C1CE96; }
+
+.white { background-color: #fff; }
+
+.dark { background-color: #353129; }
+
+.green-text {color: #C1CE96; }
+
+.white-text {color: #fff; }
+
+.dark-text {color: #353129; }
 
 
+/* Vert
+______________________________________________________ */
 
-
-
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}	
 
 
