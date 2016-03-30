@@ -1,25 +1,39 @@
 <?php
-/*
-	if(isset($_POST['submit'])) {
+
+if(isset($_POST['submit'])) {
+	
+	$to = "cliff.dogra@gmail.com";
+	$subject = "from Shawnamason.com Contact Form";
+	$name = $_POST['name'];
+	$phone = $_POST['phone'];
+	$email = $_POST['email'];
+	$comment = $_POST['comment'];
 		
-$msg = 'Name: ' .$_POST['name'] ."\n"
-				.'Phone: ' .$_POST['phone'] ."\n"
-				.'Email: ' .$_POST['email'] ."\n"
-				.'Comment: ' .$_POST['comment'];
 		
-		mail('cliff.dogra@gmail.com, 'Messesge from website', $msg);
-		print "SENT:"
-		header('location: contact-thanks.html');
-		
-	} else {
-		header('location: contact.php);
-		exit(0);
+	if (!$_POST['name']) {
+		$errName = 'Please Enter Your Name.';
 	}
+		
+	$body = "From: $name\n Phone: $phone\n Email: $email\n Message:\n $comment\n";
+
+	
+/*
+	mail($to, $subject, $body);
+	header('location: contact-thanks.html');
 */
+	
 
-$msg=$_POST['comment'];
-mail('cliff.dogra@gmail.com', 'Messesge from website', $msg);
+	if (!$errName) {
+		if (mail($to, $subject, $body)) {
+			header('location: contact-thanks.html');
+		} else {
+			echo 'error';
+		}
+	} else {
+		echo 'Not Sent';
+	}
 
-header('location: contact-thanks.html');
+
+}
 
 ?>
