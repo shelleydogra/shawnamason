@@ -2,8 +2,8 @@
 
 if(isset($_POST['submit'])) {
 	
-	$to = "cliff.dogra@gmail.com";
-	$subject = "from Shawnamason.com Contact Form";
+	$to = "singhmason@gmail.com";
+	$subject = "Potential Client from Shawnamason.com Contact Form";
 	$name = $_POST['name'];
 	$phone = $_POST['phone'];
 	$email = $_POST['email'];

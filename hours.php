@@ -57,7 +57,7 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="home.html">Home</a></li>
-							<li class="active"><a href="hours.html">Hours</a></li>
+							<li class="active"><a href="hours.php">Hours</a></li>
 							<li><a href="contact.php">Contact</a></li>
 							<li><a href="directions.html">Directions</a></li>
 						</ul>
@@ -68,18 +68,21 @@
 		
 
 	
-	<div class="container text-center text-capitalize">
+	<div class="container text-center">
 		<div class="row"> <!-- HEADING ROW -->
 				<div class="col-md-12">
 					<div class="jumbotron">
 
 						<h1>The Law Office of Shawna Mason</h1>
-						<h2>office hours</h2>
+						
+						<h3>1008 E. Geneva Rd.  Wheaton, IL 60187</h3>
+						
+						<h1 class="text-uppercase">Office Hours</h1>
+						
 					</div>
 				</div>
 		</div>
 	</div>
-	
 	
 
 
@@ -90,18 +93,19 @@
 					
 					<thead>
 						<tr>
-							<th class="text-center"><h3>Day</h3></th>
-							<th class="text-center"><h3>Hours</h3></th>
+							<th class="text-center"><h2>Day</h2></th>
+							<th class="text-center"><h2>Hours</h2></th>
 						</tr>
 					</thead>
 					
 					<tbody class="text-capitalize">
 						<tr>
-							<td><h4>monday - friday</h4></td>
-							<td><h4>10:00 A.M - 5:00 P.M</h4></td>
+							<td><h2>monday - friday</h2></td>
+							<td><h2>10:00 A.M - 5:00 P.M</h2></td>
 						</tr>
 
 					</tbody>
+					
 				</table>
 				
 			</div>
@@ -118,7 +122,6 @@
 				<div class="bottom-navbar hidden-lg hidden-md hidden-xs">Call us today for a <strong>free</strong> consultation <b>630.752.1410</b>.</div>
 				<div class="bottom-navbar hidden-lg hidden-sm hidden-xs">Call us today for a <strong>free</strong> consultation <b>630.752.1410</b>. Walk Ins Welcome. | Monday - Friday 10AM - 5PM</div>
 				<div class="bottom-navbar hidden-md hidden-sm hidden-xs">Call us today for a <strong>free</strong> consultation <b>630.752.1410</b>. | Walk Ins Welcome. | Appointments Preferred | Monday - Friday 10AM - 5PM</div>
-				
 			</div>
       	</div>
 	</nav>

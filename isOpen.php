@@ -38,6 +38,7 @@
 
 
 
+
 <body>
 	
 	<!-- 	NAVBAR - Responsive default bootstrap navbar -->
@@ -56,9 +57,9 @@
 				</div>
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
-							<li class="active"><a href="home.html">Home</a></li>
-							<li><a href="hours.php">Hours</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="home.html">Home</a></li>
+							<li><a href="hours.html">Hours</a></li>
+							<li><a href="contact.html">Contact</a></li>
 							<li><a href="directions.html">Directions</a></li>
 						</ul>
 					</div>	
@@ -74,131 +75,123 @@
 					<div class="jumbotron">
 
 						<h1>The Law Office of Shawna Mason</h1>
-						<h3>1008 E. Geneva Rd.  Wheaton, IL 60187</h3>
 						
 					</div>
 				</div>
 		</div>
 	</div>
-	
-
-
-	<div class="row">
-		<div class="container text-center text-capitalize">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				
-				
-				<div class="col-sm-4 hidden-lg hidden-md hidden-sm">
-					<a href="#col_1">
-						<div class="jumbotron jumbotron-inverse">
-							<h3 class="text-uppercase"> <strong>tax help!!!</strong></h3>
-						</div>
-					</a>
-				</div>
-				
-				
-				<div class="col-sm-4 hidden-lg hidden-md hidden-sm">
-					<a href="#col_2">
-						<div class="jumbotron jumbotron-inverse">
-							<h3>small business services</h3>
-						</div>
-					</a>
-				</div>
-				
-				
-				<div class="col-sm-4 hidden-lg hidden-md hidden-sm">
-					<a href="#col_3">
-						<div class="jumbotron jumbotron-inverse">
-							<h3>probate & estate planning</h3>
-						</div>
-					</a>
-				</div>
-				
-				
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-
-	<a name="col_1"></a>
-	<div class="row">
-		<div class="container text-center text-capitalize">
-			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				
-				
-				
-				
-				<div class="col-sm-4">
-					<div class="jumbotron-inverse-text panel panel-default">
-						<div class="panel-heading">
-							<h2 class="text-uppercase"><strong>tax help!!!</strong></h2>
-						</div>
-
-						<ul class="list-group">
-							<li class="list-group-item">Tax Preparation with REAL Representation</li>
-						    <li class="list-group-item">Past Due Taxes</li>
-						    <li class="list-group-item">Audit Representation</li>
-						    <li class="list-group-item">IRS Levies & Garnishments</li>
-						    <li class="list-group-item">Offers in Compromise</li>
-						    <li class="list-group-item">Illinios Department of Revenue Petitions & Problem Resolution</li>
-				  		</ul>
-				  		<a name="col_2"></a>
-					</div>
-				</div>
-				
-				
-				
-				
-
-				<div class="col-sm-4">
-					<div class="jumbotron-inverse-text panel panel-default">
-						<div class="panel-heading">
-							<h2>small business services</h2>
-						</div>
-
-						<ul class="list-group">
-						    <li class="list-group-item"><strong>* flat fee *</strong> <br /> incorporation & business start up packages</li>
-						    <li class="list-group-item">contracts & releases</li>
-						    <li class="list-group-item">payroll services</li>
-						    <li class="list-group-item">year round tax preparation with REAL representation</li>
-						    <li class="list-group-item">we are quickbooks pro advisors and offer year round bookkeeping services</li><a name="col_3"></a>
-				  		</ul>
-					</div>
-				</div>
-				
-
-				
-				
-				
-
-				
-				<div class="col-sm-4">
-					<div class="jumbotron-inverse-text panel panel-default">
-						<div class="panel-heading">
-							<h2>Probate & Estate Planning</h2>
-						</div>
-
-						<ul class="list-group">
-						    <li class="list-group-item"> <strong>* flat fee *</strong> <br />Wills & Trust Formation </li>
-						    <li class="list-group-item">Special Needs Trusts</li>
-						    <li class="list-group-item">All of our Estate Planning Packages include an Illinois Statutory Power of Attorney for Health Care and for Property</li>
-						    <li class="list-group-item">Small Estate Affividats</li>
-						    <li class="list-group-item">Probate Administration & Representation</li>
-				  		</ul>
-					</div>
-				</div>
-				
 		
+	<?php
 
-			</div>
-		</div>	
-	</div>	
-	
+date_default_timezone_set('Europe/Copenhagen');
 
+// Runs the function
+echo time_str();
+
+function time_str() {
+
+        if(IsHoliday())
+        {
+            return ClosedHoliday();
+        }           
+
+    $dow = date('D'); // Your "now" parameter is implied
+
+    if ($dow == 'Sat' || $dow == 'Sun') {
+        // weekend
+        return Closed();
+    }
+
+        // Time in HHMM
+        $hm = (int)date("Gi");
+
+        switch(strtolower($dow)){
+                case 'mon': //MONDAY
+                    if ($hm >=    0 && $hm <  800) return Closed();
+                    if ($hm >=  800 && $hm < 1100) return Open();
+                    if ($hm >= 1100 && $hm < 1500) return OpenDelay();
+                    if ($hm >= 1500 && $hm < 1600) return Open();
+                    if ($hm >= 1600 && $hm < 2359) return Closed();
+                    break;
+                case 'tue': //TUESDAY
+                    if ($hm >=    0 && $hm <  800) return Closed();
+                    if ($hm >=  800 && $hm < 1100) return Open();
+                    if ($hm >= 1100 && $hm < 1500) return OpenDelay();
+                    if ($hm >= 1500 && $hm < 1600) return Open();
+                    if ($hm >= 1600 && $hm < 2359) return Closed();
+                    break;              
+                case 'wed': //WEDNESDAY
+                    if ($hm >=    0 && $hm <  800) return Closed();
+                    if ($hm >=  800 && $hm < 1100) return Open();
+                    if ($hm >= 1100 && $hm < 1500) return OpenDelay();
+                    if ($hm >= 1500 && $hm < 1600) return Open();
+                    if ($hm >= 1600 && $hm < 2359) return Closed();
+                    break;              
+                case 'thu': //THURSDAY
+                    if ($hm >=    0 && $hm <  800) return Closed();
+                    if ($hm >=  800 && $hm < 1100) return Open();
+                    if ($hm >= 1100 && $hm < 1500) return OpenDelay();
+                    if ($hm >= 1500 && $hm < 1600) return Open();
+                    if ($hm >= 1600 && $hm < 2359) return Closed(); 
+                    break;              
+                case 'fri': //FRIDAY
+                    if ($hm >=    0 && $hm <  800) return Closed();
+                    if ($hm >=  800 && $hm < 1100) return Open();
+                    if ($hm >= 1100 && $hm < 1500) return OpenDelay();
+                    if ($hm >= 1500 && $hm < 1600) return Open();
+                    if ($hm >= 1600 && $hm < 2359) return Closed();
+                    break;              
+
+        }           
+}
+
+// List of holidays
+function HolidayList()
+{
+    // Format: 2009/05/11 (comma seperated)
+    return array("2010/05/04","2009/05/11");
+}
+
+// Function to check if today is a holiday
+function IsHoliday()
+{
+  // Retrieves the list of holidays
+    $holidayList = HolidayList();
+  // Checks if the date is in the holidaylist   
+    if(in_array(date("Y/m/d"),$holidayList))
+    { 
+        return true;
+  }else
+    {
+        return false;
+    }   
+}
+
+// Returns the data when open
+function Open()
+{
+        return 'Open';
+}
+
+// Return the data when closed
+function Closed()
+{
+        return 'Closed';
+}
+
+// Returns the data when open but with waiting time
+function OpenDelay()
+{
+        return 'Open, but with delay';
+}
+
+// Returns the data when closed due to holiday
+function ClosedHoliday()
+{
+        return 'Lukket pga. helligdag';
+}
+
+?>
 
 	
 	<nav class="navbar-default navbar-fixed-bottom bottom-navbar">

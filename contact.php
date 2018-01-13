@@ -24,13 +24,10 @@
 	<link rel="stylesheet" href="css/bootstrap.css.map">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	
+	<!-- My Stylesheet -->
 	<link rel="stylesheet" href="css/style.css">
 
-	
-	
-	
-	<!-- My Stylesheet -->
-	
+
 	<title>The Law Office of Shawna Mason</title>
 
 	
@@ -57,7 +54,7 @@
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-nav navbar-right">
 							<li><a href="home.html">Home</a></li>
-							<li><a href="hours.html">Hours</a></li>
+							<li><a href="hours.php">Hours</a></li>
 							<li class="active"><a href="contact.php">Contact</a></li>
 							<li><a href="directions.html">Directions</a></li>
 						</ul>
@@ -74,6 +71,7 @@
 					<div class="jumbotron">
 
 						<h1>The Law Office of Shawna Mason</h1>
+						<h3>1008 E. Geneva Rd.  Wheaton, IL 60187</h3>
 					</div>
 				</div>
 		</div>
@@ -132,47 +130,19 @@
 		</div>
 	</div>
 	
-	<!--
 	
-	<form class="form-horizontal" role="form" method="post" action="index.php">
-	    <div class="form-group">
-	        <label for="name" class="col-sm-2 control-label">Name</label>
-	        <div class="col-sm-10">
-	            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
-	        </div>
-	    </div>
-	    <div class="form-group">
-	        <label for="email" class="col-sm-2 control-label">Email</label>
-	        <div class="col-sm-10">
-	            <input type="email" class="form-control" id="email" name="email" placeholder="example@domain.com" value="">
-	        </div>
-	    </div>
-	    <div class="form-group">
-	        <label for="message" class="col-sm-2 control-label">Message</label>
-	        <div class="col-sm-10">
-	            <textarea class="form-control" rows="4" name="message"></textarea>
-	        </div>
-	    </div>
-	    <div class="form-group">
-	        <label for="human" class="col-sm-2 control-label">2 + 3 = ?</label>
-	        <div class="col-sm-10">
-	            <input type="text" class="form-control" id="human" name="human" placeholder="Your Answer">
-	        </div>
-	    </div>
-	    <div class="form-group">
-	        <div class="col-sm-10 col-sm-offset-2">
-	            <input id="submit" name="submit" type="submit" value="Send" class="btn btn-primary">
-	        </div>
-	    </div>
-	    <div class="form-group">
-	        <div class="col-sm-10 col-sm-offset-2">
-	            <! Will be used to display an alert to the user>
-	        </div>
-	    </div>
-	</form>	
--->
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="jumbotron text-center">
+					<h4>For immediate assistance, please call 630.752.1410 or visit the office. <br />  Walk Ins are welcome Monday through Friday, 10 AM to 4 PM. <br /> Evenings and Weekends by appointment only.</h4>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	
+
 	
 	<nav class="navbar-default navbar-fixed-bottom bottom-navbar">
 		<div class="container">
